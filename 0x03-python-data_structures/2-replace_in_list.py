@@ -1,7 +1,16 @@
 #!/usr/bin/python3
-def print_reversed_list_integer(my_list=[]):
-    if my_list is None:
-        return
-    reverse = reversed(my_list)
-    for i in reverse:
-        print("{:d}".format(i))
+"""A function that replaces an element of a list in a specific position"""
+
+
+def replace_in_list(my_list, idx, element):
+    if idx < 0:
+        return(my_list)
+
+    length = len(my_list)
+
+    if idx > length - 1:
+        return(my_list)
+
+    my_list[idx] = element
+
+    return(my_list)
